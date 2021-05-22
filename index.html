@@ -597,6 +597,7 @@ values: [
                 useCookie: true,
                 onItemClick: function(data) {
                     alert("Item clicked - show some details");
+
                 },
                 onAddClick: function(dt, rowId) {
                     alert("Empty space clicked - add an item!");
@@ -611,7 +612,7 @@ values: [
             $(".gantt").popover({
                 selector: ".bar",
                 title: function _getItemText() {
-                    console.log(this.data);
+                    console.log(this);
                     return this.textContent;
                 },
                 container: '.gantt',
