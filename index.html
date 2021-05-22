@@ -610,6 +610,7 @@ values: [
             $(".gantt").popover({
                 selector: ".bar",
                 title: function _getItemText() {
+                    console.log(this);
                     return this.textContent;
                 },
                 container: '.gantt',
