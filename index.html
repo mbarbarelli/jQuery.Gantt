@@ -497,6 +497,9 @@ values: [
         $(function() {
             "use strict";
 
+            var map = {}; 
+            map["Requirement Gathering"] = "These art the RG details.";
+
             var demoSource = [{
                 name: "Sprint 0",
                 desc: "Analysis",
@@ -504,8 +507,7 @@ values: [
                     from: 1320192000000,
                     to: 1322401600000,
                     label: "Requirement Gathering",
-                    customClass: "ganttRed", 
-                    data: {"data":"mydata"}
+                    customClass: "ganttRed"
                 }]
             },{
                 desc: "Scoping",
@@ -613,7 +615,7 @@ values: [
             $(".gantt").popover({
                 selector: ".bar",
                 title: function _getItemText() {
-                    console.log(this);
+                    console.log(map[this.textContent]);
                     return this.textContent;
                 },
                 container: '.gantt',
